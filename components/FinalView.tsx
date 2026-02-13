@@ -2,13 +2,14 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const CHANNA_MEREYA_URL = "/_Channa_Mereya_Arijit_Singh_Ringtone_(by Fringster.com).mp3";
+const ARZ_KIYA_HAI =
+  "/Meri_Mehfil_Tere _Jaane_Se_Veeran_Hai_Arz_Kiya_Hai_Anuv_Jain_Hindi.mp3";
 
 const FinalView: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio(CHANNA_MEREYA_URL);
+    audioRef.current = new Audio(ARZ_KIYA_HAI);
     audioRef.current.loop = true;
     audioRef.current.play().catch(e => console.log("Audio play blocked by browser policy"));
     return () => {
@@ -36,7 +37,7 @@ const FinalView: React.FC = () => {
         transition={{ delay: 0.5 }}
         className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter leading-tight"
       >
-        "last me tu bhi arijit ke gaane sunega laadle"
+        "last me tu bhi Anuv jain ke gaane sunega laadle"
       </motion.h1>
 
       <motion.div
@@ -45,7 +46,7 @@ const FinalView: React.FC = () => {
         transition={{ delay: 1.5 }}
         className="mt-12 space-y-4"
       >
-        <p className="text-rose-400 font-mono text-xs">Playing: Channa Mereya (Endless Loop Edition)</p>
+        <p className="text-rose-400 font-mono text-xs">Playing: Arz kiya hai  (Endless Loop Edition)</p>
         <div className="flex gap-1 justify-center">
           {Array.from({ length: 15 }).map((_, i) => (
             <motion.div
